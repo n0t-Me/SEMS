@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER_LEFT" fx:id="topBar">
+    <Label text="Employees Management System"/>
+</HBox>

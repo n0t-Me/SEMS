@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ems.EmployeesManagementSystem.HomeController" stylesheets="@main.css">
+    <top>
+        <HBox alignment="CENTER_LEFT" fx:id="topBar">
+            <Label text="Employees Management System"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox>
+            <Label fx:id="greeter"/>
+        </VBox>
+    </center>
+    <left>
+        <fx:include source="nav.fxml"/>
+    </left>
+</BorderPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+      fx:controller="com.ems.EmployeesManagementSystem.LoginUi" stylesheets="@login.css">
+    <Label text="Employees Management System" styleClass="labelHeader"/>
+    <VBox alignment="CENTER" spacing="20.0" fx:id="loginBox">
+        <HBox alignment="CENTER">
+            <Label text="Username: "/>
+            <TextField onAction="#onAction" fx:id="usernameTF"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Label text="Password: "/>
+            <PasswordField onAction="#onAction" fx:id="passwordTF"/>
+        </HBox>
+        <Button onAction="#onAction" text="Login"/>
+        <Label fx:id="errLabel" styleClass="labelError"/>
+    </VBox>
+</VBox>

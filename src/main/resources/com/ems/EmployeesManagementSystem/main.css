@@ -1,0 +1,47 @@
+.statusLabel{
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+
+#topBar {
+    -fx-background-color: teal;
+    -fx-padding: 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: black;
+}
+
+#navBar {
+    -fx-background-color: grey;
+    -fx-padding: 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-border-width: 0 2px 0 0;
+    -fx-border-color: black;
+}
+
+#center {
+    -fx-padding: 20;
+}
+
+.navBtn {
+    -fx-border-width: 0 0px 2px 0;
+    -fx-border-color: black;
+    -fx-padding: 15 90 15 2;
+}
+
+#updateBtn {
+    -fx-background-color: teal;
+}
+
+#errSettingsLabel {
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+#greeter {
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-padding: 20 0 0 20;
+}

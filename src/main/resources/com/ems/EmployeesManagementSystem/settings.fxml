@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@main.css" fx:controller="com.ems.EmployeesManagementSystem.SettingsController">
+    <top>
+        <fx:include source="topBar.fxml"/>
+    </top>
+    <center>
+        <GridPane alignment="TOP_LEFT" vgap="20" hgap="20">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+            <Label text="Network Settings" style="-fx-font-weight:bold; -fx-font-size:18" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0"/>
+            <Label text="   DB Host:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="hostTF" promptText="localhost"
+                       onAction="#onAction"/>
+            <Label text="   DB Port:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="portTF" promptText="3306" text="3306"
+                       onAction="#onAction"/>
+            <Label text="   DB Name:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="nameTF" promptText="employees"
+                       onAction="#onAction"/>
+            <Label text="   DB Username:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="usernameTF" promptText="mysql"
+                       onAction="#onAction"/>
+            <Label text="   DB Password" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="passwordPF" onAction="#onAction"/>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="6" alignment="CENTER_RIGHT">
+                <Button text="Update" fx:id="updateBtn" onAction="#onAction"/>
+            </HBox>
+            <Label text="" GridPane.rowIndex="7" GridPane.columnIndex="1" GridPane.columnSpan="2"
+                   fx:id="errSettingsLabel"/>
+        </GridPane>
+    </center>
+    <left>
+        <fx:include source="nav.fxml"/>
+    </left>
+</BorderPane>

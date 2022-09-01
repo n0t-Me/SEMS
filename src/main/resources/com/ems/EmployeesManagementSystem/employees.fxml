@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ems.EmployeesManagementSystem.EmployeeManagerController" stylesheets="@main.css">
+    <top>
+        <fx:include source="topBar.fxml"/>
+    </top>
+    <center>
+        <VBox spacing="20" fx:id="center">
+            <VBox alignment="CENTER" spacing="20">
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <TextField fx:id="tfEmpFirstName" onAction="#onButtonClick" promptText="First Name"/>
+                    <TextField fx:id="tfEmpLastName" onAction="#onButtonClick" promptText="Last Name"/>
+                    <ComboBox fx:id="cbGender" promptText="--Gender--">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Male"/>
+                                <String fx:value="Female"/>
+                                <String fx:value="Any"/>
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Button text="Search" onAction="#onButtonClick"/>
+                </HBox>
+                <TableView fx:id="empTable" onMousePressed="#onRowSelect">
+                    <placeholder>
+                        <Label text="No data entries. Or something somewhere is broken :P"
+                               style="-fx-font-weight:bold;"/>
+                    </placeholder>
+                    <columns>
+                        <TableColumn prefWidth="${empTable.width*0.12}" text="Emp.No" fx:id="EmpNoCol"/>
+                        <TableColumn prefWidth="${empTable.width*0.21}" text="First name" fx:id="FirstNameCol"/>
+                        <TableColumn prefWidth="${empTable.width*0.21}" text="Last name" fx:id="LastNameCol"/>
+                        <TableColumn prefWidth="${empTable.width*0.2}" text="Salary" fx:id="SalaryCol"/>
+                        <TableColumn prefWidth="${empTable.width*0.26}" text="Department" fx:id="DepartmentCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox spacing="40" alignment="CENTER">
+                <Label text="Employee Summary:" style="-fx-font-weight: bold;-fx-font-size:20;"/>
+                <HBox VBox.vgrow="ALWAYS">
+                    <VBox HBox.hgrow="ALWAYS" spacing="20">
+                        <Label text="Employee No.: " fx:id="empNo" styleClass="statusLabel"/>
+                        <Label text="First Name: " fx:id="empFirstName" styleClass="statusLabel"/>
+                        <Label text="Last Name " fx:id="empLastName" styleClass="statusLabel"/>
+                        <Label text="Gender: " fx:id="empGender" styleClass="statusLabel"/>
+                        <Label text="Birthday: " fx:id="empBDay" styleClass="statusLabel"/>
+                    </VBox>
+                    <VBox HBox.hgrow="ALWAYS" spacing="20">
+                        <Label text="Hire Date: " fx:id="empHireDate" styleClass="statusLabel"/>
+                        <Label text="Department: " fx:id="empDept" styleClass="statusLabel"/>
+                        <Label text="Title: " fx:id="empTitle" styleClass="statusLabel"/>
+                        <Label text="Salary: " fx:id="empSalary" styleClass="statusLabel"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+    <left>
+        <fx:include source="nav.fxml"/>
+    </left>
+</BorderPane>

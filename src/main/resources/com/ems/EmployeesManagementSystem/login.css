@@ -1,0 +1,17 @@
+.labelHeader {
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+
+.labelError {
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+#loginBox {
+    -fx-border-width: 3;
+    -fx-border-color: black;
+    -fx-border-insets: 40 200 0 200;
+    -fx-border-radius: 25;
+    -fx-padding: 50 20 50 20;
+}
